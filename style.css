@@ -12,11 +12,11 @@
 .page {
     display: flex;
     flex-wrap: nowrap;
-    gap: 24px;
+    gap: 16px;
     justify-content: center;
     align-items: flex-start;
-    padding: 24px;
-    max-width: 1100px;
+    padding: 16px;
+    max-width: 840px;
     margin: 0 auto;
 }
 
@@ -44,10 +44,10 @@
 }
 
 .piece-tray {
-    width: 416px;
-    min-height: 632px;
+    width: 200px;
+    min-height: 1864px;
     display: grid;
-    grid-template-columns: repeat(2, 200px);
+    grid-template-columns: 200px;
     gap: 16px;
     align-content: start;
     justify-content: start;
@@ -78,7 +78,7 @@
     display: none;
 }
 
-@media (max-width: 1080px) {
+@media (max-width: 860px) {
     .page {
         flex-wrap: wrap;
         max-width: none;
