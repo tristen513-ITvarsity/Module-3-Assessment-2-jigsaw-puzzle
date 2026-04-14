@@ -16,7 +16,7 @@
     justify-content: center;
     align-items: flex-start;
     padding: 16px;
-    max-width: 840px;
+    max-width: 1248px;
     margin: 0 auto;
 }
 
@@ -44,10 +44,10 @@
 }
 
 .piece-tray {
-    width: 200px;
-    min-height: 1864px;
+    width: 632px;
+    min-height: 632px;
     display: grid;
-    grid-template-columns: 200px;
+    grid-template-columns: repeat(3, 200px);
     gap: 16px;
     align-content: start;
     justify-content: start;
@@ -78,7 +78,7 @@
     display: none;
 }
 
-@media (max-width: 860px) {
+@media (max-width: 1260px) {
     .page {
         flex-wrap: wrap;
         max-width: none;
@@ -106,5 +106,6 @@
     .piece-tray {
         width: 416px;
         grid-template-columns: repeat(2, 200px);
+        min-height: auto;
     }
 }
