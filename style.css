@@ -11,11 +11,13 @@
 
 .page {
     display: flex;
-    flex-wrap: wrap;
-    gap: 32px;
+    flex-wrap: nowrap;
+    gap: 24px;
     justify-content: center;
     align-items: flex-start;
-    padding: 32px;
+    padding: 24px;
+    max-width: 1100px;
+    margin: 0 auto;
 }
 
 .board-panel,
@@ -23,6 +25,7 @@
     padding: 0;
     background: transparent;
     box-shadow: none;
+    flex: 0 0 auto;
 }
 
 .puzzle-board {
@@ -41,12 +44,13 @@
 }
 
 .piece-tray {
-    width: 700px;
-    min-height: 700px;
-    display: flex;
-    flex-wrap: wrap;
+    width: 416px;
+    min-height: 632px;
+    display: grid;
+    grid-template-columns: repeat(2, 200px);
     gap: 16px;
-    align-content: flex-start;
+    align-content: start;
+    justify-content: start;
     padding: 0;
     position: relative;
 }
@@ -74,21 +78,33 @@
     display: none;
 }
 
-@media (max-width: 1360px) {
+@media (max-width: 1080px) {
+    .page {
+        flex-wrap: wrap;
+        max-width: none;
+    }
+
     .piece-tray {
         width: 632px;
         min-height: auto;
+        grid-template-columns: repeat(3, 200px);
     }
 }
 
 @media (max-width: 700px) {
     .page {
         padding: 16px;
+        gap: 16px;
     }
 
     .board-panel,
     .pieces-panel {
         width: 100%;
         overflow-x: auto;
+    }
+
+    .piece-tray {
+        width: 416px;
+        grid-template-columns: repeat(2, 200px);
     }
 }
